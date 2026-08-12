@@ -1,0 +1,132 @@
+STATISTICS: Used to summarize the past data and understanding the patterns hidden un the data
+-----------
+2 types:
+1) DECRIPTIVE STATS: study of past data
+DATA: collection of information
+2 types: 
+ 1.structurel data
+   categorical data
+   numerical data
+ 2.unstructural data
+
+
+A. Descriptive Statistics
+
+Describes the data that you already have.
+
+Examples:
+
+Mean			: sum of observations/no of obs
+
+Median			: Middle value after sorting : 3
+
+Mode			: most frequently repeated val
+
+Variance		: Tells how far the data is from mean
+
+var = sigma[(x-X)**2]/n 
+x = value
+X = mean
+n = no of observations
+
+x	x - X		(x-X)**2
+1	-1.66		2.755
+2	-0.66		0.43
+3	0.34		0.1156
+3	0.34		0.1156
+3	0.34		0.1156
+4	1.34		1.7956
+---------------------------------
+		total : 5.33
+			5.6/6 = 0.88833
+
+Standard deviation	:sqrt(0.88833) = 0.942
+if std is high : data is far from mean
+else: data is near to the mean
+
+Skewness		: Tells about asymmetricity of the data
+
+1)Positive skewness	:Right tailed(mean > median)
+	skewness > 0
+2)Negative skewness	:Left tailed(mean < median)
+	skewness < 0
+3)No skewness		:Normally distributed(symmetrically) : (Mean = Median)
+	skewness = 0
+
+Outliers:[1,5,6,3,5,6,334343,2,5,6,-34342]
+
+Extreme values in the data 
+334343,-34342 - outliers
+
+Techniques to discover outliers:
+IQR method	:remove or replace
+ZScore method:remove pr replace
+BOX plot
+
+if outliers are more : replace with other value
+else : removed to handle outliers
+
+
+IQR - Inter-quantile-range : used to handle outliers
+step 1 : Q1 : 25% quantile, Q2 : 50% - median, Q3 : 75% quantile
+
+data = [1,7,8,101,2,3,2,34567890,-765432,7,8,4.4] = [-765432,1,2,2,3,4.4,7,7,8,8,101,34567890]
+Q2 : 5.7, Q1 : 2, Q3 : 8
+
+step 2: finding IQR:Q3 - Q1 = 6
+
+step 3: finding higher fence : Q3 + IQR*1.5 = 8 + (6*1.5) = 17
+
+step 4: finding lower fence : Q1 - IQR*1.5 = 2 - (6*1.5) = -7
+
+step 5: outliers: lower then LF and higher then HF = -765432,101,34567890(i for i in data if i < LF or i > HF)
+
+outlier_free_data : data > LF and data < HF
+
+
+ZSCORE Method:
+
+Z - score = x - mean/std = 
+
+[-765432,1,2,2,3,4.4,7,7,8,8,101,34567890]
+
+x 		Z-score
+-765432		-765433 - 2816883.44/9575606.66 = |-0.37410856222450556| = no
+1 
+2
+2
+3
+4.4
+7
+7
+8
+8
+101
+34567890
+
+
+BOX PLOT : we can see outlier
+
+
+
+
+
+Percentiles
+Quartiles
+Data visualization
+correlation
+Range
+
+
+NUMPY: Numerical python : easily make calculation
+numpy arrays: 
+import numpy
+
+numpy only takes at a time single data type
+
+a = numpy.array([1,2,3,'4',4]) 
+if we give any one int as given str its takes all as a str
+
+
+
+2)INFERNTIAL STATS: 
