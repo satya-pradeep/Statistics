@@ -127,6 +127,67 @@ numpy only takes at a time single data type
 a = numpy.array([1,2,3,'4',4]) 
 if we give any one int as given str its takes all as a str
 
+hypothesis Testing:
+
+Null Hypothesis		: Having no change, no relation and no state (H0)
+Alternative Hypothesis	: Having change, relation or state (H1 or Ha) : what we want to prove
+
+Chandana is doctor : Medicine
+
+survival rate before medicine = 30%
+
+survival rate after medicine = 80%
+
+
+H0 : Medicine is not working 
+H1 : Medicine is working good
+
+p_value : probability to reject null hypothesis 
+
+significance level : 0.01 to 1.0 = 0.05(willing to accept 5% error
+
+
+if p_value <= 0.05:
+	print("null hyp is Rejected")
+else:
+	print("Failed to reject null Hypothesis")
+
+data
+
+avg 65
+
+p_value = .098e-23
+
+
+1000 got registered 
+20 ppl as sample
+
+H0 : no change of wts(no use of camp)
+
+H1 : change in wts
+
+before : [80,90,88,78,....]
+after  : [67,87,84,73,....]
+
+p_value : 0.0054
+
+we always compare p_value with significant level 
+
+
+TESTS IN HYPOTHESIS TESTING
+
+Choosing the tests based on the datasets
+1) Ztest : one dataset and if stddev is known
+	from statsmodels.stats.weightstats import ztest -- package	
+
+2) TTest
+  >One- samples ttest
+  >Two sampled ttest
+  >Paired ttest
+3) chi^2 test
+4) ANOVA
+5) Pearsons' test
+
 
 
 2)INFERNTIAL STATS: 
